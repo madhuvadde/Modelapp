@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default">
+<%= link_to "New User",new_user_path %>
+</nav>
+
+
+
+<h1>This is the Homepage for <%= @users.count %> users</h1>
+<table border="1">
+
+	<thead>
+	<tr>
+		<td>Name</td>
+        <td>Email</td>
+        <td>Show</td>
+        </tr>
+	</thead>
+
+	<tbody>
+		<% @users.each do |u| %>
+		<tr>
+		<td><%= u.name %></td>
+		<td><%= u.email %></td>
+		<td><a href="/users/<%= u.id %>">Profile</td>
+		</tr>
+		<% end %>
+		</div>
+		
+	</tbody>
+</table>
+<%= link_to "New User",new_user_path %>

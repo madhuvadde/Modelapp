@@ -1,9 +1,11 @@
 <nav class="navbar navbar-default">
-<%= link_to "New User",new_user_path %>
+<center>
+<h3><%= link_to "Login",new_user_path %></h3>
+</center>
 </nav>
 
 
-
+<center>
 <h1>This is the Homepage for <%= @users.count %> users</h1>
 <table border="1">
 
@@ -11,7 +13,7 @@
 	<tr>
 		<td>Name</td>
         <td>Email</td>
-        <td>Show</td>
+       <!-- <td>Show</td> -->
         </tr>
 	</thead>
 
@@ -20,11 +22,12 @@
 		<tr>
 		<td><%= u.name %></td>
 		<td><%= u.email %></td>
-		<td><a href="/users/<%= u.id %>">Profile</td>
+	<!--	<td><a href="/users/<%= u.id %>">Profile</td> -->
 		</tr>
 		<% end %>
 		</div>
 		
 	</tbody>
 </table>
-<%= link_to "New User",new_user_path %>
+
+</center>

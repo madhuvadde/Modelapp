@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
  
-	root "users#new"
+    root "home#index"
+    resources :home
+	#root "users#new"
 	resources :users
 	resources :sessions
 	resources :posts

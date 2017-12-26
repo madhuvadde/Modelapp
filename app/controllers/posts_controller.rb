@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+	before_action :login
 	def index
 		@post = Post.all
 	end

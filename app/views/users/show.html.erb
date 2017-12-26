@@ -1,28 +1,9 @@
-<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<div class="container">
-    <div class="fb-profile">
-        <img align="left" class="fb-image-lg" src="http://lorempixel.com/850/280/nightlife/5/" alt="Profile image example"/>
-        <img align="left" class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example"/>
-        <div class="fb-profile-text">
-            <h1><%= @user.name %></h1>
-            <p>Profile</p>
-        </div>
-    </div>
-</div> <!-- /container -->  
-
-
-
-
-
-
-
-  
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <h4><%= link_to "POST",new_post_path %></h4>
-      <h4><a href="#">Events</a></h4>
-      <h4><a href="#">Fests</a></h4>
+      <h4><%= link_to "posts",posts_path %></h4>
+      <h4><a href="#">events</a></h4>
+      <h4><a href="#">fests</a></h4>
     </div>
     <div class="col-sm-8 text-left"> 
       <h1>Welcome <%= @user.name %></h1>

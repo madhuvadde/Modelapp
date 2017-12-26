@@ -1,3 +1,6 @@
+
+<center>
+
 <% if flash[:errors] %>
 <p> <% flash[:errors].each do |err| %></p>
 <p> <%= err %> </p>
@@ -9,9 +12,10 @@
 <%= form_for @posts do |f| %>
 <%= f.label :Filename %>
 <%= f.text_field :name %>
-<br> <br>
-<%= f.label :attachment %>
+<br> 
+<%= f.label :file %>
 <%= f.file_field :attachment %>
 <br>
 <%= f.submit "Save" %>
 <% end %>
+</center>

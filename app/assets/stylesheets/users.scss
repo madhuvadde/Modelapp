@@ -40,3 +40,51 @@ body
     width: 20%; 
 }
 }
+.form-group{
+          
+         padding: 10px;
+         display: block;
+         width:50%;
+         text-transform:capitalize;
+         margin: 1px solid;
+         font-size: 16px;
+         color: deeppink;
+         margin-left: 60px;
+         font-family:Monaco,monospace;   
+}
+#container
+        {
+            width: 300px;
+            height:300px;
+            margin: 0 auto; 
+            margin-top:120px; 
+            border:2px solid #aabbcc;
+            margin-left:50px;
+        }
+#heading{
+    margin-left:100px;
+    color:deeppink;
+}
+
+#button {
+    margin-left:60px;
+    margin-top:-10px;
+    font-size:20px;
+}
+#box
+        {
+            width: 300px;
+            height:500px;
+            margin: 0 auto; 
+            margin-top:50px; 
+            border:2px solid #aabbcc;
+            margin-left:50px;
+        }
+#submit {
+    margin-left:50px;
+    margin-top:-10px;
+}
+#register{
+    margin-left:80px;
+    color:deeppink;
+}

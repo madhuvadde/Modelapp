@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>register and login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
 <% if flash[:errors] %>
 <% flash[:errors].each do|e| %>
 <p><%= e %></p>
@@ -6,38 +20,53 @@
 <h3><%= link_to "Home",home_index_path %></h3>
 <div class="row">
 <div id="registration" class="col-md-6">
-<h1> Register </h1>
+<div id="box">
+<h1 id="register"> Register </h1>
 <%= form_for @user do |f| %>
+<div class="form-group">
  <%= f.label :name %>
  <%= f.text_field :name %>
- <br />
+ </div>
+ <div class="form-group">
   <%= f.label :email %>
- <span class="glyphicon glyphicon-envelope">
  <%= f.email_field :email %>
-</span>
- <br />
+ </div>
+<div class="form-group">
   <%= f.label :password %>
  <%= f.password_field :password %>
- <br />
+ </div>
+ <div class="form-group">
   <%= f.label :password_confirmation %>
  <%= f.password_field :password_confirmation %>
- <br />
+ </div>
+ <div class="form-group">
+ <div id="submit">
  <%= f.submit :signup %>
+ </div>
+ </div>
 	<% end %>
 	</div>
+</div>
 
 <div id="login" class="col-md-6">
-	<h1>login </h1>
+ <div id='container'>
+	<h1 id="heading">Login </h1>
 	<%= form_tag sessions_path do %>
+	<div class="form-group">
 	<%=label_tag :email %>
  <%= email_field_tag :email %>
- <br />
+ </div>
+ <div class="form-group">
   <%= label_tag :password %>
  <%= password_field_tag :password %>
- <br />
- <%= submit_tag "login" %>
+ </div>
+ <div class="form-group">
+ <div id="button">
+ <%= submit_tag "Login" %>
+ </div>
+ </div>
  <% end %>
- <br>
+ </div>
  </div>
 	</body>
 </html>

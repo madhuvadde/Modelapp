@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_action :login
+	#before_action :login
   def index
   	@users=User.all
   end

@@ -1,6 +1,4 @@
 class SessionsController < ApplicationController
-	  
-
 
          def create
 		user=User.find_by(email: params[:email])
@@ -14,10 +12,7 @@ class SessionsController < ApplicationController
 	end
 
 
-def show
-	@user=user
 
-end
 
 
 	def destroy

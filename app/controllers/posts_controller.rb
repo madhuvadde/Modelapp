@@ -6,11 +6,13 @@ class PostsController < ApplicationController
 
 	def new
 		@posts=Post.new
+		
 	end
 
 	def create
-		post=Post.new(post_params)
+       post=Post.new(post_params)
 		if post.save
+
 			redirect_to posts_path
 		else
 			flash[:errors]=post.errors.full_messages

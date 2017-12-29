@@ -9,5 +9,5 @@ class ApplicationController < ActionController::Base
   	 	flash[:errors] = ["you must login first"]
   	 	redirect_to new_user_path
   	 end
-  	end
+  end
 end

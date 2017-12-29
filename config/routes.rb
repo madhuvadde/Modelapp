@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
  
-  get 'developers/index'
-
     root "home#index"
     resources :home
+	#root "users#new"
 	resources :users
 	resources :sessions
 	resources :posts

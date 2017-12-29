@@ -1,21 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>register and login</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+<% provide(:title, "register and login") %>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">St.Anne's</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/home">Home</a></li>
+        <li><a href="/developers/index">Developers</a></li>
+        <li><a href="#">Contacts</a></li> 
+        <li><a href="/users">Users</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/users/new"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/users/new"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <% if flash[:errors] %>
+<div class="row">
 <% flash[:errors].each do|e| %>
-<p><%= e %></p>
+<p class="text-danger"><%= e %></p>
 <% end %>
+</div>
 <% end %>
-<h3><%= link_to "Home",home_index_path %></h3>
+
 <div class="row">
 <div id="registration" class="col-md-6">
 <div id="box">
@@ -48,17 +65,17 @@
  </div>
  </div>
 
-	<% end %>
-	</div>
+  <% end %>
+  </div>
 </div>
 
-  <div id="container">
+  
   <div id="login" class="col-md-6">
   <h1 id="heading">login </h1>
-  <%= form_tag sessions_path do %>
 
-  <div class="form-group">
-  <%=label_tag :email %>
+  <%= form_tag sessions_path do %>
+<div class="form-group">
+ <%=label_tag :email %>
  <%= email_field_tag :email %>
  </div>
 
@@ -72,9 +89,12 @@
  <%= submit_tag "login" %>
  </div>
  </div>
+ 
+  
  <% end %>
 
  </div>
-</div>
-	</body>
-</html>
+
+
+
+  

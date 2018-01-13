@@ -1,6 +1,6 @@
 <% provide(:title, "register and login") %>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-fixed-top navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -24,7 +24,10 @@
     </div>
   </div>
 </nav>
-
+<br>
+<br>
+<br>
+<br>
 <% if flash[:errors] %>
 <div class="row">
 <% flash[:errors].each do|e| %>

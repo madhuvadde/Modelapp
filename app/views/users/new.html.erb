@@ -30,11 +30,16 @@
 <br>
 <% if flash[:errors] %>
 <div class="row">
-<% flash[:errors].each do|e| %>
-<p class="text-danger"><%= e %></p>
+<% flash[:errors].each do |e| %>
+<p class="text-danger">
+<%= e %> 
+</p>
 <% end %>
 </div>
 <% end %>
+
+<%= flash[:success] %>
+
 
 <div class="row">
 <div id="registration" class="col-md-6">
